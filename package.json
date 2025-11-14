@@ -1,0 +1,36 @@
+{
+  "name": "session-b-list",
+  "version": "1.0.0",
+  "author": "",
+  "license": "MIT",
+  "description": "Learning React with a demo project",
+  "scripts": {
+    "start": "vite",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "build": "vite build",
+    "upload": "node ./scripts/upload.cjs",
+    "build:upload": "npm run build && npm run upload",
+    "deploy-to-fm": "npm run build && npm run upload",
+    "openfile": "node ./scripts/openFileOnServer",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "open": "^8.2.1",
+    "postcss": "^8.4.16",
+    "prettier": "2.6.2",
+    "process": "^0.11.10",
+    "vite": "^6.1.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-singlefile": "^2.1.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.16",
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^4.1.16"
+  },
+  "demoType": "build-react-app"
+}
