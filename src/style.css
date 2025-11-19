@@ -1,1 +1,86 @@
-@import "tailwindcss"
+@import "tailwindcss";
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --breakpoint-3xl: 120rem;
+  --color-jsinfm-100:"#f0f0f0";
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  /* ... */
+}
+/* 80s Computer Monitor Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* CRT Flicker Animation */
+@keyframes flicker {
+  0% { opacity: 1; }
+  98% { opacity: 1; }
+  99% { opacity: 0.98; }
+  100% { opacity: 1; }
+}
+
+/* Phosphor glow effect */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; }
+  50% { text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00, 0 0 35px #00ff00; }
+  100% { text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; }
+}
+
+/* Apply subtle flicker to screen */
+.crt-screen {
+  animation: flicker 3s infinite;
+}
+
+/* Enhance phosphor text */
+.phosphor-text {
+  color: #00ff00;
+  animation: glow 2s ease-in-out infinite alternate;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
+/* Custom scrollbar for retro feel */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  border: 1px solid #00ff00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
+
+/* Input placeholder styling */
+input::placeholder {
+  color: rgba(0, 255, 0, 0.6) !important;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.6) !important;
+}
+
+/* Prevent text selection highlight from breaking the aesthetic */
+::selection {
+  background-color: rgba(0, 255, 0, 0.3);
+  color: #00ff00;
+}
